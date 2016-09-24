@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mum.store.controller.SaleController">
+   <children>
+      <Label alignment="CENTER" layoutX="260.0" layoutY="10.0" text="Sale Information">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="69.0" text="Bill Number" />
+      <Label layoutX="388.0" layoutY="69.0" text="Bill Date" />
+      <TextField fx:id="saleBillNumberTextField" layoutX="111.0" layoutY="65.0" />
+      <DatePicker fx:id="saleBillDate" layoutX="443.0" layoutY="65.0" />
+      <TableView fx:id="sale_TableView" layoutX="17.0" layoutY="105.0" prefHeight="225.0" prefWidth="607.0">
+         <columns>
+            <TableColumn fx:id="itemName" prefWidth="245.0" text="Item Name" />
+            <TableColumn fx:id="qty" prefWidth="74.0" text="Quantity" />
+            <TableColumn fx:id="price" prefWidth="82.0" text="Price" />
+            <TableColumn fx:id="amount" prefWidth="104.0" text="Amount" />
+            <TableColumn fx:id="deleteCol" prefWidth="101.0" text="Delete" />
+            <TableColumn fx:id="itemId" prefWidth="245.0" text="Item Id" visible="false" />
+         </columns>
+      </TableView>
+      <Label layoutX="33.0" layoutY="354.0" text="Product" />
+      <Label layoutX="251.0" layoutY="354.0" text="Qty" />
+      <Label layoutX="362.0" layoutY="354.0" text="Price" />
+      <ComboBox fx:id="itemNameComboField" layoutX="82.0" layoutY="350.0" prefWidth="150.0" />
+      <TextField fx:id="saleQuatityTextField" layoutX="280.0" layoutY="350.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="salePriceTExtField" layoutX="402.0" layoutY="350.0" prefHeight="25.0" prefWidth="133.0" />
+      <Button layoutX="558.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleSave" text="Add Item" />
+      <Label layoutX="374.0" layoutY="402.0" text="Total Amount">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sale_totalAmount" layoutX="477.0" layoutY="400.0" />
+      <Button layoutX="569.0" layoutY="441.0" mnemonicParsing="false" prefWidth="57.0" text="Clear" />
+      <Button layoutX="446.0" layoutY="441.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Save" />
+   </children>
+</AnchorPane>
